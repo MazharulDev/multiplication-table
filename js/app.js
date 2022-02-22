@@ -4,13 +4,22 @@ document.getElementById('submit-btn').addEventListener('click',function(){
     const field=document.getElementById('field');
     for(let i=1;i<11;i++){
         const calc=numBoxValue*i;
-        const div=document.createElement('div');
-        div.innerHTML= `${numBoxValue}*${i}= ${calc}`
-        field.appendChild(div);
+        const p=document.createElement('div');
+        p.style.marginBottom='10px'
+        p.style.borderBottom='3px solid lightblue'
+        p.innerHTML= `${numBoxValue}*${i}= ${calc}`
+        field.appendChild(p);
     
         numBox.value='';
        
         
     }
 
+})
+function clear(){
+    // window.location.reload();
+    console.log('clicked');
+}
+document.getElementById('clear').addEventListener('click',function(){
+    window.location.reload();
 })
